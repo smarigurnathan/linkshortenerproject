@@ -37,7 +37,26 @@ export default async function DashboardPage() {
             </Show>
 
             <Show when="signed-in">
-              <UserButton />
+              <UserButton
+                afterSignOutUrl="/"
+                appearance={{
+                  variables: {
+                    colorPrimary: "#a78bfa",
+                    colorBackground: "#111114",
+                    colorInputBackground: "#18181b",
+                    colorText: "#f4f4f5",
+                    colorTextSecondary: "#a1a1aa",
+                    colorNeutral: "#3f3f46",
+                    borderRadius: "0.75rem",
+                  },
+                  elements: {
+                    userButtonPopoverCard: "border border-white/10 bg-[#111114] shadow-2xl shadow-black/40",
+                    userButtonPopoverActionButton: "text-zinc-200 hover:bg-white/5",
+                    userButtonPopoverActionButtonText: "text-zinc-200",
+                    userButtonPopoverFooter: "border-t border-white/10",
+                  },
+                }}
+              />
             </Show>
           </div>
         </div>

@@ -63,7 +63,7 @@ export default async function Home() {
 
           <div className="flex items-center gap-3">
             <Show when="signed-out">
-              <SignInButton>
+              <SignInButton forceRedirectUrl="/dashboard">
                 <Button
                   variant="outline"
                   size="sm"
@@ -73,7 +73,7 @@ export default async function Home() {
                 </Button>
               </SignInButton>
 
-              <SignUpButton>
+              <SignUpButton forceRedirectUrl="/dashboard">
                 <Button
                   size="sm"
                   className="rounded-full bg-white text-black hover:bg-zinc-200"
@@ -84,7 +84,26 @@ export default async function Home() {
             </Show>
 
             <Show when="signed-in">
-              <UserButton />
+              <UserButton
+                afterSignOutUrl="/"
+                appearance={{
+                  variables: {
+                    colorPrimary: "#a78bfa",
+                    colorBackground: "#111114",
+                    colorInputBackground: "#18181b",
+                    colorText: "#f4f4f5",
+                    colorTextSecondary: "#a1a1aa",
+                    colorNeutral: "#3f3f46",
+                    borderRadius: "0.75rem",
+                  },
+                  elements: {
+                    userButtonPopoverCard: "border border-white/10 bg-[#111114] shadow-2xl shadow-black/40",
+                    userButtonPopoverActionButton: "text-zinc-200 hover:bg-white/5",
+                    userButtonPopoverActionButtonText: "text-zinc-200",
+                    userButtonPopoverFooter: "border-t border-white/10",
+                  },
+                }}
+              />
             </Show>
           </div>
         </div>
@@ -110,13 +129,13 @@ export default async function Home() {
 
               <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
                 <Show when="signed-out">
-                  <SignUpButton>
+                  <SignUpButton forceRedirectUrl="/dashboard">
                     <Button size="lg" className="rounded-full bg-white px-6 text-base text-black hover:bg-zinc-200">
                       Create account
                     </Button>
                   </SignUpButton>
 
-                  <SignInButton>
+                  <SignInButton forceRedirectUrl="/dashboard">
                     <Button
                       variant="outline"
                       size="lg"
