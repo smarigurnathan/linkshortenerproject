@@ -16,21 +16,21 @@ export default async function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-50 text-zinc-900">
-      <header className="border-b border-zinc-200 bg-white/80 backdrop-blur-sm">
+    <div className="min-h-screen bg-zinc-950 text-white">
+      <header className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="text-lg font-semibold tracking-tight">Link Shortener</div>
+          <div className="text-lg font-semibold tracking-tight text-white">Link Shortener</div>
 
           <div className="flex items-center gap-3">
             <Show when="signed-out">
               <SignInButton>
-                <Button variant="outline" size="sm" className="rounded-full border-zinc-300 text-zinc-900 hover:bg-zinc-100">
+                <Button variant="outline" size="sm" className="rounded-full border-zinc-700 bg-zinc-900 text-white hover:bg-zinc-800">
                   Sign in
                 </Button>
               </SignInButton>
 
               <SignUpButton>
-                <Button size="sm" className="rounded-full bg-zinc-900 text-white hover:bg-zinc-700">
+                <Button size="sm" className="rounded-full bg-white text-zinc-950 hover:bg-zinc-200">
                   Sign up
                 </Button>
               </SignUpButton>
@@ -38,14 +38,12 @@ export default async function DashboardPage() {
 
             <Show when="signed-in">
               <UserButton
-                afterSignOutUrl="/"
                 appearance={{
                   variables: {
                     colorPrimary: "#a78bfa",
                     colorBackground: "#111114",
-                    colorInputBackground: "#18181b",
-                    colorText: "#f4f4f5",
-                    colorTextSecondary: "#a1a1aa",
+                    colorForeground: "#f4f4f5",
+                    colorMutedForeground: "#a1a1aa",
                     colorNeutral: "#3f3f46",
                     borderRadius: "0.75rem",
                   },
@@ -63,7 +61,7 @@ export default async function DashboardPage() {
       </header>
 
       <main className="mx-auto max-w-6xl px-6 py-12">
-        <h1 className="text-3xl font-bold tracking-tight text-zinc-950">Dashboard</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
       </main>
     </div>
   );

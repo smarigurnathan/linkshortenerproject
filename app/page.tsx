@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { AuthRedirect } from "@/components/auth-redirect";
 import { Button } from "@/components/ui/button";
 
 const featureCards = [
@@ -52,6 +53,7 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-[#09090b] text-white">
+      <AuthRedirect />
       <header className="border-b border-white/10 bg-[#111114]/90 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-white">
@@ -85,14 +87,12 @@ export default async function Home() {
 
             <Show when="signed-in">
               <UserButton
-                afterSignOutUrl="/"
                 appearance={{
                   variables: {
                     colorPrimary: "#a78bfa",
                     colorBackground: "#111114",
-                    colorInputBackground: "#18181b",
-                    colorText: "#f4f4f5",
-                    colorTextSecondary: "#a1a1aa",
+                    colorForeground: "#f4f4f5",
+                    colorMutedForeground: "#a1a1aa",
                     colorNeutral: "#3f3f46",
                     borderRadius: "0.75rem",
                   },

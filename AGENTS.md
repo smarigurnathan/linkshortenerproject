@@ -26,6 +26,8 @@ Build a clean, production-minded URL shortener that:
 - Keep database schema changes in `db/schema.ts` and make sure they are consistent with Drizzle usage.
 - Use Tailwind utility classes for styling and favor the existing shadcn-style component patterns in `components/ui`.
 - All UI elements in this app use shadcn/ui. Do not create custom components; always use shadcn/ui components.
+- Never use `middleware.ts` in this project. It is deprecated in the version of Next.js used here and is not supported for this app architecture.
+- Use `proxy.js` instead of `middleware.ts` whenever a proxy or edge-level request interception is needed in this project.
 - Do not add dependencies unless there is a clear need and a strong project justification.
 - Preserve accessibility and semantic HTML in all interactive elements.
 - Keep changes minimal, focused, and aligned to the task scope.
