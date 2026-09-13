@@ -1,3 +1,7 @@
+---
+description: Read this before implementing any authentication in the project.
+---
+
 # Authentication and Route Protection
 
 ## Scope

@@ -1,7 +1,7 @@
 ---
 name: create-instructions
 description: Describe when to use this prompt
-agent: instruction-generator
+agent: Instruction-Generator
 ---
 
 <!-- Tip: Use /create-prompt in chat to generate content with agent assistance -->
