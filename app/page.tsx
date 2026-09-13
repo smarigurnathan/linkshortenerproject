@@ -78,7 +78,7 @@ export default async function Home() {
               <SignUpButton forceRedirectUrl="/dashboard">
                 <Button
                   size="sm"
-                  className="rounded-full bg-white text-black hover:bg-zinc-200"
+                  className="rounded-full bg-pink-500 text-white hover:bg-pink-600"
                 >
                   Sign up
                 </Button>
@@ -130,7 +130,7 @@ export default async function Home() {
               <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row">
                 <Show when="signed-out">
                   <SignUpButton forceRedirectUrl="/dashboard">
-                    <Button size="lg" className="rounded-full bg-white px-6 text-base text-black hover:bg-zinc-200">
+                    <Button size="lg" className="rounded-full bg-pink-500 px-6 text-base text-white hover:bg-pink-600">
                       Create account
                     </Button>
                   </SignUpButton>
@@ -281,7 +281,7 @@ export default async function Home() {
               <SignUpButton>
                 <Button
                   size="lg"
-                  className="mt-8 rounded-full bg-white px-6 text-base text-black hover:bg-zinc-200"
+                  className="mt-8 rounded-full bg-pink-500 px-6 text-base text-white hover:bg-pink-600"
                 >
                   Start for free
                   <ArrowRight className="ml-2 h-4 w-4" />

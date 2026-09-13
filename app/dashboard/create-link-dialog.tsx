@@ -43,7 +43,7 @@ export function CreateLinkDialog() {
       <Button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="rounded-full bg-white px-4 text-black hover:bg-zinc-200"
+        className="rounded-full bg-pink-500 px-4 text-white hover:bg-pink-600"
       >
         + create link
       </Button>
